@@ -7,8 +7,11 @@ The main user is `mathew`. The password is not specified in the file. The hostna
 
 ## To build:
 
+On a fresh install of nixOS:
+
 ```
 git clone https://github.com/MathewKJ2048/nixos-dotfiles
 cd ./nixos-dotfiles
+cp /etc/nixos/hardware-configuration
 sudo nixos-rebuild switch -I nixos-config=./configuration.nix
 ```
