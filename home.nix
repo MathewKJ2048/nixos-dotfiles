@@ -8,8 +8,12 @@
     programs.bash = {
         enable = true;
         shellAliases = {
-            hello = "echo hello";
             cls = "clear";
+            nrsf = "sudo nixos-rebuild switch --flake .#nixos";
         };
     };
+
+    home.packages = with pkgs; [
+        sl
+    ];
 }
