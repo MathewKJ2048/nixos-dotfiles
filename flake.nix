@@ -6,15 +6,13 @@
   };
 
   
-  outputs = { self, nixpkgs }: 
-  let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in
+  outputs = { self, nixpkgs, ... }@inputs: 
+  
   {
 
-    packages.x86_64-linux.hello = pkgs.hello;
-
-    packages.x86_64-linux.default = pkgs.hello;
+    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+    modules = [ ./configuration.nix ];
+   };
 
   };
 }
