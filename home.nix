@@ -5,24 +5,38 @@
 
     home.stateVersion = "25.05";
 
-    programs.bash = {
-        enable = true;
-        shellAliases = {
-            cls = "clear";
-            nrsf = "sudo nixos-rebuild switch --flake .#nixos";
-        };
-
-        initExtra = ''
-        export PS1='\W▶'
-        '';
-    };
-
     home.packages = with pkgs; [
         sl
         guake
         vlc
+        vscodium
+        fzf
+        zoxide
     ];
 
-    # programs.guake.enable = true;
-    services.guake.enable = true;
+    programs.zsh = {
+        enable = true;
+        syntaxHighlighting.enable = true;
+
+        # todo - history, zoxide, fzf, default shell
+
+        shellAliases = {
+            cls = "clear";
+            nrsf = "sudo nixos-rebuild switch --flake .#nixos";
+            ls = "ls --color";
+            cd = "z";
+        };
+
+        initContent = ''
+        export PS1='%~▶'
+        '';
+    };
+
+    programs.zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+    };
+
+    
+
 }

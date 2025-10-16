@@ -85,13 +85,14 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     # thunderbird
-      vscodium
     ];
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
   programs.git.enable = true;
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
