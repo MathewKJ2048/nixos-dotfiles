@@ -18,7 +18,7 @@
         enable = true;
         syntaxHighlighting.enable = true;
 
-        # todo - history, zoxide, fzf, default shell
+        history.size = 10000; # this is a home-manager option
 
         shellAliases = {
             cls = "clear";
