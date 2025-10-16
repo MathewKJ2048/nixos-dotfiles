@@ -58,6 +58,21 @@
         userEmail = "mathewkj2048@gmail.com";
     };
 
+    programs.vscode = {
+        enable = true;
+        package = pkgs.vscodium;
+        profiles.default.userSettings = {
+            "files.autoSave" = "afterDelay";
+            "editor.fontSize" = 16;
+            "editor.wordWrap" = "on";
+            "editor.confirmDragandDrop" = false;
+            "editor.confirmDelete" = false;
+
+            # 
+            "workbench.layoutControl.enabled" = false;
+        };       
+    };
+
     
 
 }
