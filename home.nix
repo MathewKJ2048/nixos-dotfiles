@@ -14,17 +14,32 @@
         zoxide
     ];
 
+    systemd.user.services.drop-down-terminal = {
+        Unit = {
+            Description = "automatically start drop-down terminal guake";
+            After = ["graphical-session.target"]; # wait for cinnamon to load first
+            Requires = ["graphical-session.target"]; # dependency: if the desktop stops, so does guake
+        };
+        Install.WantedBy = ["graphical-session.target"];
+        Service = {
+            Type = "simple"; # most common type
+            ExecStart = "${pkgs.guake}/bin/guake"; # a simple command won't work because the shell is loaded after systemd
+        };
+    };
+
     programs.zsh = {
         enable = true;
         syntaxHighlighting.enable = true;
 
-        history.size = 10000; # this is a home-manager option
+        history.size = 10000; 
+        history.save = 10000;
 
         shellAliases = {
             cls = "clear";
             nrsf = "sudo nixos-rebuild switch --flake .#nixos";
             ls = "ls --color";
             cd = "z";
+            code = "codium";
         };
 
         initContent = ''
@@ -35,6 +50,12 @@
     programs.zoxide = {
         enable = true;
         enableZshIntegration = true;
+    };
+
+    programs.git = {
+        enable = true;
+        userName = "Mathew Kuthur James";
+        userEmail = "mathewkj2048@gmail.com";
     };
 
     
