@@ -28,36 +28,7 @@
         };
     };
 
-    programs.zsh = {
-        enable = true;
-        syntaxHighlighting.enable = true;
-
-        history.size = 10000; 
-        history.save = 10000;
-
-        shellAliases = {
-            cls = "clear";
-            nrsf = "sudo nixos-rebuild switch --flake .#nixos";
-            ls = "ls --color";
-            cd = "z";
-            code = "codium";
-        };
-
-        initContent = ''
-        export PS1='%~▶'
-        '';
-    };
-
-    programs.zoxide = {
-        enable = true;
-        enableZshIntegration = true;
-    };
-
-    programs.git = {
-        enable = true;
-        userName = "Mathew Kuthur James";
-        userEmail = "mathewkj2048@gmail.com";
-    };
+    
 
     
 
@@ -67,6 +38,9 @@
     imports = [
         ./apps/firefox.nix
         ./apps/vscodium.nix
+        ./apps/git.nix
+        ./apps/zoxide.nix
+        ./apps/zsh.nix
     ];
 
     
