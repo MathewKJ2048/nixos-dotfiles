@@ -8,7 +8,7 @@
         "files.autoSave" = "afterDelay"; # this is the option for instant autosave
 
         "editor.fontSize" = 16;
-        "editor.wordWrap" = "on";
+        "editor.wordWrap" = "on"; # avoid horizontal scrolling
         "window.zoomLevel" = -1; # sets a comfortable default zoom
 
         # prevents pop-ups for delete and move
