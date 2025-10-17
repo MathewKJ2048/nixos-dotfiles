@@ -39,6 +39,16 @@ nix-garbage-collect
 
 ## Summary of shortcuts:
 
+### General:
+
+- ctrl+S : save
+- ctrl+Z : undo
+- ctrl+Y : redo
+- ctrl+A : select all
+- ctrl+X : cut
+- ctrl+V : paste
+- ctrl+C : copy
+
 ### VSCodium:
 
 - ctrl+plus/minus - zoom in and out
@@ -48,8 +58,13 @@ nix-garbage-collect
 - ctrl+h - find and replace (can be done inside the selection by toggling a button)
 - ctrl+f - local find
 - ctrl+shift+f - global find
+- ctrl+shift+e - back to explorer
 - ctrl+k ctrl+t - switch color theme
 - ctrl+/ - comment/uncomment lines
+- ctrl+r - open folder
+- ctrl+n - new file
+- ctrl+shift+n - new window
+- ctrl+b - toggle showing the files
 
 ### Guake:
 
@@ -57,4 +72,25 @@ nix-garbage-collect
 - ctrl+f - toggle fullscreen
 - ctrl+| - split vertical
 - ctrl+- - split horizontal
-- 
+
+### Cinnamon:
+
+- ctrl+alt+del - stop everything
+- alt+tab - switch tabs
+- windows key - open menu
+
+### Firefox:
+
+- ctrl+n - new window
+- ctrl+t - new tab
+- ctrl+w - close current tab
+- ctrl+k - focus on search bar
+- ctrl+p - print
+- ctrl+shift+I - inspector
+
+### ZSH
+
+- up/down - command history
+- tab - autocomplete
+- ctrl+shift+x/c/p - cut/copy/paste
+
