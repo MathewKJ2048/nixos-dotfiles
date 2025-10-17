@@ -7,7 +7,6 @@ theming the desktop
 
 theming guake
 
-guake doesn't work properly on restart, it shouldn't shift down or auto-dropdown
 
 familiarize oneself with the nix repl for testing things
 
