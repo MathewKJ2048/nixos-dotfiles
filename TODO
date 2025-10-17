@@ -22,3 +22,5 @@ set up nix2dconf as a tool in this shell instead of a global package
 extract out the startup system as a function to reuse
 
 configure menu and calendar
+
+fast-fetch, btop
