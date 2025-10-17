@@ -31,19 +31,31 @@ After the fresh install, or on an existing install, navigate to the intended par
 ```
 git clone https://github.com/MathewKJ2048/nixos-dotfiles
 cd ./nixos-dotfiles
-cp -rf /etc/nixos/hardware-configuration.nix .    # substitute the hardware config with the one for your machine - the default hardware configuration is for a virtualbox VM
-sudo nixos-rebuild switch --flake .#nixos   # this takes some time, the hostname comes after the hash
+
+# substitute the hardware config with the one for your machine 
+# the default hardware configuration is for a virtualbox VM
+cp -rf /etc/nixos/hardware-configuration.nix .    
+
+# build the configuration
+sudo nixos-rebuild switch --flake .#nixos
 ```
 
-The rebuild command `sudo nixos-rebuild switch --flake .#nixos` is aliased to `nrsf` for future rebuilds, for convenience.
+The build command `sudo nixos-rebuild switch --flake .#nixos` takes a lot of time during the first run, since it has to fetch and install every app. 
+
+To rebuild after changes, the same command is used. The build command is aliased to `nrsf` for future rebuilds, for convenience.
 
 ## To update:
 
-Go to the directory where the flake.lock file is present. 
+The rebuild command preserves reproducibility of packages, including the versions. The versions are specified in `flake.lock`, which is a file generated from the `flake.nix` file which specifies the nix channel where the packages are sourced from.
+
+Updating the packages requires updating the `flake.lock` file first. To update, go to the directory where the flake.lock file is present. 
 
 ```
-sudo nix flake update   # updates the flake.lock file to the latest
-sudo nixos-rebuild switch --flake .#nixos       # syncs the system with the new flake.lock file
+# update the flake.lock file to the latest
+sudo nix flake update   
+
+# sync the system with the new flake.lock file
+sudo nixos-rebuild switch --flake .#nixos       
 ```
 
 After multiple updates, if the disk space is being used up, run:
@@ -52,7 +64,7 @@ After multiple updates, if the disk space is being used up, run:
 nix-garbage-collect
 ```
 
-
+This gets rid of old versions of packages.
 
 
 ## General notes:
