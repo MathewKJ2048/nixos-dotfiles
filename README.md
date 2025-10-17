@@ -1,9 +1,10 @@
 # nixos-dotfiles
 Dotfiles for my setups, using the nix configuration language
 
-## General:
+## Personal:
 
-The main user is `mathew`. The password is not specified in the file. The hostname is `nixos`.
+- The main user is `mathew`.  
+- The git config is set up with my email and name.
 
 ## Fresh install:
 
@@ -40,7 +41,7 @@ cp -rf /etc/nixos/hardware-configuration.nix .
 sudo nixos-rebuild switch --flake .#nixos
 ```
 
-The build command `sudo nixos-rebuild switch --flake .#nixos` takes a lot of time during the first run, since it has to fetch and install every app. 
+The build command `sudo nixos-rebuild switch --flake .#nixos` takes a lot of time during the first run, since it has to fetch and install every package. 
 
 To rebuild after changes, the same command is used. The build command is aliased to `nrsf` for future rebuilds, for convenience.
 
@@ -66,8 +67,20 @@ nix-garbage-collect
 
 This gets rid of old versions of packages.
 
+## Virtual Box:
 
-## General notes:
+- After running the nixos installer, ensure that the settings of the VM are changed to boot from the installation, instead of the installer. This can be achieved by changing the boot order in `Settings -> System -> Boot Order`.
+
+- Recommended settings: 8192 MB memory, 32 GB storage, 8 processors.
+
+- Enabling `bidirectional` in `Settings -> General -> Advanced` allows clipboards to be shared between the guest and host.
+
+
+## Notes:
+
+- The password is not specified in the file.
+ 
+- The hostname is `nixos`.
 
 - if a file-not-found error occurs, ensure git add is performed - nrsf requires imported files to be part of the git tree
 
