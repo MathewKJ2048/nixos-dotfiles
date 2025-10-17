@@ -8,3 +8,14 @@ theming the desktop
 theming guake
 
 familiarize oneself with the nix repl for testing things
+
+
+come up with a proper system for theming using dconf, including separating theme and function
+
+look into switching to librewolf
+
+nix2dconf bug? maybe report
+
+set up nix2dconf as a tool in this shell instead of a global package
+
+extract out the startup system as a function to reuse

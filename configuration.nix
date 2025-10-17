@@ -83,10 +83,8 @@
     isNormalUser = true;
     description = "Mathew Kuthur James";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    # thunderbird
-    ];
-    shell = pkgs.zsh;
+    shell = pkgs.zsh; # default shell for the user
+    # packages managed via home-manager
   };
 
   # Install firefox.

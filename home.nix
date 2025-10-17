@@ -13,6 +13,17 @@
         fzf
         zoxide
         dconf2nix
+        # flameshot
+    ];
+
+    imports = [
+        ./apps/firefox.nix
+        ./apps/vscodium.nix
+        ./apps/git.nix
+        ./apps/zoxide.nix
+        ./apps/zsh.nix
+        ./apps/guake.nix
+        ./apps/nemo.nix
     ];
 
     systemd.user.services.drop-down-terminal = {
@@ -27,22 +38,5 @@
             ExecStart = "${pkgs.guake}/bin/guake"; # a simple command won't work because the shell is loaded after systemd
         };
     };
-
-    
-
-    
-
-    
-
-
-    imports = [
-        ./apps/firefox.nix
-        ./apps/vscodium.nix
-        ./apps/git.nix
-        ./apps/zoxide.nix
-        ./apps/zsh.nix
-    ];
-
-    
 
 }
