@@ -24,6 +24,9 @@
         ./apps/zsh.nix
         ./apps/guake.nix
         ./apps/nemo.nix
+        ./apps/cinnamon.nix
+        ./apps/gnome_desktop_interface.nix
+        ./apps/x.nix
     ];
 
     systemd.user.services.drop-down-terminal = {

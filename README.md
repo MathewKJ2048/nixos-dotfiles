@@ -29,3 +29,32 @@ After multiple updates, if the disk space is being used up, run:
 ```
 nix-garbage-collect
 ```
+
+
+## General notes:
+
+- if a file-not-found error occurs, ensure git add is performed - nrsf requires imported files to be part of the git tree
+
+- The system preferred theme is in x.nix
+
+## Summary of shortcuts:
+
+### VSCodium:
+
+- ctrl+plus/minus - zoom in and out
+- ctrl+` - toggle terminal
+- ctrl+shift+p - command palette
+- ctrl+p - file search
+- ctrl+h - find and replace (can be done inside the selection by toggling a button)
+- ctrl+f - local find
+- ctrl+shift+f - global find
+- ctrl+k ctrl+t - switch color theme
+- ctrl+/ - comment/uncomment lines
+
+### Guake:
+
+- ctrl+tab - show/hide
+- ctrl+f - toggle fullscreen
+- ctrl+| - split vertical
+- ctrl+- - split horizontal
+- 

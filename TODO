@@ -7,6 +7,8 @@ theming the desktop
 
 theming guake
 
+guake doesn't work properly on restart, it shouldn't shift down or auto-dropdown
+
 familiarize oneself with the nix repl for testing things
 
 
@@ -19,3 +21,5 @@ nix2dconf bug? maybe report
 set up nix2dconf as a tool in this shell instead of a global package
 
 extract out the startup system as a function to reuse
+
+configure menu and calendar

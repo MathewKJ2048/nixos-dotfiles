@@ -51,7 +51,7 @@ with lib.hm.gvariant;
     };
 
     "org/guake/style/background" = {
-      transparency = 84;
+      transparency = 86;
     };
 
     "org/guake/style/font" = {

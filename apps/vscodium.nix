@@ -9,6 +9,7 @@
 
         "editor.fontSize" = 16;
         "editor.wordWrap" = "on";
+        "window.zoomLevel" = -1; # sets a comfortable default zoom
 
         # prevents pop-ups for delete and move
         "editor.confirmDragandDrop" = false;
@@ -16,6 +17,9 @@
 
         # cleans up UI
         "workbench.layoutControl.enabled" = false;
+
+        # sticky scroll
+        "editor.stickyScroll.enabled" = false;
     };       
   };
 }
