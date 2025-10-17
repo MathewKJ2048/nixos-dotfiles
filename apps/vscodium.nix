@@ -20,6 +20,8 @@
 
         # sticky scroll
         "editor.stickyScroll.enabled" = false;
+        "workbench.tree.enableStickyScroll" = false;
+        "terminal.integrated.stickyScroll.enabled" = false;
     };       
   };
 }
