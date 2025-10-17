@@ -6,6 +6,8 @@
 
               "browser.aboutConfig.showWarning" = false;
 
+              "devtools.toolbox.host" = "left"; # dock devtools to left
+
               "browser.startup.page" = 1; # set startup homepage to home
               "browser.startup.homepage" = "about:home";
 
